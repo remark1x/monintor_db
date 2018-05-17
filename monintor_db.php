@@ -1,7 +1,10 @@
 <?php
 class mon_sql extends mysqli{
 	private $db;
-	private $cuser;
+	//private $cuser;
+	//for test
+	private $cuser="test6";
+
 	function __construct(){
 		//$db_json=file_get_contents("mon.json") or die("Fail to get json");
 		$db_json=file_get_contents("/home/wwwfile/mon.json") or die("Fail to get json");
@@ -27,8 +30,8 @@ class mon_sql extends mysqli{
 		$short->bind_param("sss",$user_name,$user_code,$user_email);
 		if($short->execute()){
 		echo "Inserted<br \>";
-		return true;
 		$this->cuser=$user_name;
+		return true;
 		}
 		else{
 		echo "Error".mysqli_error();
@@ -36,33 +39,38 @@ class mon_sql extends mysqli{
 		}
 	}	
 
-	private function change_base($table,$name,$value,$user=NULL){
+	private function change_base($table,$name,$value,$primary_key,$user=NULL){
 		if(!$user) $user=$this->cuser;
-		$sql="update".$type."set".$name."=? where user_name =?";
+		$sql='update '.$table.
+					 ' set '.$name.' =? where '.$primary_key.' =?';
 		$db=$this->db;
 		$short = $db->prepare($sql);
 		$short->bind_param("ss",$value,$user);
+		
 		if($short->execute())
 		return true;
 		else
 		return false;
 	}	
-	private function hello(){echo "hello\n";}
+
 	public function change($change_name,$change_val){
-		$this->hello();
 		switch ($change_name){
 		case "user_code":
-			if ($this->change_base("user","user_code",$change_val)) echo "changed! new val:".$change_val."\n";
+			echo "user_code:\n";
+			if ($this->change_base("user","user_code",$change_val,"user_name")) echo "changed! new val:".$change_val."\n";
 			break;
 		}
 	
-	}	
+	}
+	
+	
 
 }
+//echo phpinfo();
 echo "php inited\n";
 $mon_db = new mon_sql();
-$mon_db->insert_user("test6","test_code","test_email");
-$mon_db->change("user_code","change_value2018...");
+//$mon_db->insert_user("test12","test_code","test_email");
+$mon_db->change("user_code","Mypasswprd$#@%");
 
 ?>
 
