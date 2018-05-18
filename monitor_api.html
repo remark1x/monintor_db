@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/acer/Desktop/monitor_api.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+    <style type="text/css">
+        #container {
+            margin: 8px;
+        }
+
+        .param-table {
+            background: #E6E6E6;
+            border: 1px solid #FFF;
+            margin: 12px 0;
+            border-collapse: collapse;
+        }
+
+        .param-table th {
+            background: gray;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid #FFF;
+            padding: 5px;
+        }
+
+        .param-table td {
+            border-collapse: collapse;
+            border: 1px solid #FFF;
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .param-table .th-name {
+            min-width: 140px;
+        }
+
+        .param-table .th-identifier {
+            min-width: 140px;
+        }
+
+        .param-table .th-type {
+            min-width: 100px;
+        }
+
+        .param-table .th-remark {
+            min-width: 200px;
+        }
+
+        .param-table .td-name {}
+
+        .param-table .td-identifier {}
+
+        .param-table .td-type   { color: #990000; }
+
+        .param-table .td-remark { color: #666; }
+
+        .param-table .tr-level-1 { background: #F5F5F5; }
+        .param-table .tr-level-1 .td-identifier { padding-left: 5px; }
+
+        .param-table .tr-level-2 { background: #E6E6E6; }
+        .param-table .tr-level-2 .td-identifier { padding-left: 15px; }
+
+        .param-table .tr-level-3 { background: #CCCCCC; }
+        .param-table .tr-level-3 .td-identifier { padding-left: 25px; }
+
+        .param-table .tr-level-4 { background: #E6E6E6; }
+        .param-table .tr-level-4 .td-identifier { padding-left: 35px; }
+
+        .param-table .tr-level-5 { background: #CCCCCC; }
+        .param-table .tr-level-5 .td-identifier { padding-left: 45px; }
+
+        .param-table .tr-level-6 { background: #E6E6E6; }
+        .param-table .tr-level-6 .td-identifier { padding-left: 55px; }
+
+        .param-table .tr-level-7 { background: #CCCCCC; }
+        .param-table .tr-level-7 .td-identifier { padding-left: 65px; }
+
+        .param-table .tr-level-8 { background: #E6E6E6; }
+        .param-table .tr-level-8 .td-identifier { padding-left: 75px; }
+
+        .param-table .tr-level-9 { background: #CCCCCC; }
+        .param-table .tr-level-9 .td-identifier { padding-left: 85px; }
+
+        .param-table .tr-level-10 { background: #E6E6E6; }
+        .param-table .tr-level-10 .td-identifier { padding-left: 95px; }
+
+        .param-table .tr-level-11 {
+            background: #CCCCCC;
+        }
+        .param-table .tr-level-11 .td-identifier { padding-left: 105px; }
+
+        .param-table .tr-level-12 {
+            background: #E6E6E6;
+        }
+        .param-table .tr-level-12 .td-identifier { padding-left: 115px; }
+
+        .param-table .tr-level-13 {
+            background: #CCCCCC;
+        }
+        .param-table .tr-level-13 .td-identifier { padding-left: 125px; }
+    </style>
+</head>
+<body>
+<div id="container">
+            <div class="module">
+            <h1>1&nbsp;monitor_api</h1>
+                            <div class="page">
+                    <h2>1.1&nbsp;add</h2>
+                                            <div class="action">
+                            <h3>1.1.1&nbsp;add_user</h3>
+
+                            <h3>URL</h3>
+                            <div>add_user/</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div>register an account</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name">user_code</td><td class="td-identifier">user_code</td><td class="td-type">string</td><td class="td-remark"></td></tr><tr class="tr-level-1"><td class="td-name">user_name</td><td class="td-identifier">user_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name">message number</td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.name exists 2.invalid name 3.invalid code</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.1.2&nbsp;add_device</h3>
+
+                            <h3>URL</h3>
+                            <div>add_device/</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div>add device with dev ID</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name">dev id</td><td class="td-identifier">dev_id</td><td class="td-type">number</td><td class="td-remark"></td></tr><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">dev_code</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.dev not exists 2.dev code not match</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.1.3&nbsp;add_group</h3>
+
+                            <h3>URL</h3>
+                            <div>add_group/</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div>add group for user</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">group_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.name exists 2.invalid name</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.1.4&nbsp;add_group_passway</h3>
+
+                            <h3>URL</h3>
+                            <div>add_group_passway</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div>add passway into group</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">passway_num</td><td class="td-type">number</td><td class="td-remark"></td></tr><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">group_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.invalid group name 2.invalid passway number</td></tr></tbody></table>
+                        </div>
+                                    </div>
+                            <div class="page">
+                    <h2>1.2&nbsp;log</h2>
+                                            <div class="action">
+                            <h3>1.2.1&nbsp;login</h3>
+
+                            <h3>URL</h3>
+                            <div>login/</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div>log in</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">user_code</td><td class="td-type">string</td><td class="td-remark"></td></tr><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">user_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 2.user name not exists 3.user_code not match</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.2.2&nbsp;logout</h3>
+
+                            <h3>URL</h3>
+                            <div>logout/</div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div>transform user_name into anonymity_account.</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.error</td></tr></tbody></table>
+                        </div>
+                                    </div>
+                            <div class="page">
+                    <h2>1.3&nbsp;change</h2>
+                                            <div class="action">
+                            <h3>1.3.1&nbsp;change_ucode</h3>
+
+                            <h3>URL</h3>
+                            <div>change_user_code</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">user_code</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.invalid code</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.3.2&nbsp;change_user_device_name</h3>
+
+                            <h3>URL</h3>
+                            <div>change_dname</div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">dev_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type"></td><td class="td-remark">0.success 1.invalid name</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.3.3&nbsp;change_user_emial</h3>
+
+                            <h3>URL</h3>
+                            <div>change_uemial/</div>
+
+                            <h3>Method</h3>
+                            <div>POST</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">user_email</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">string</td><td class="td-remark">0.success 1.invalid email</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.3.4&nbsp;change_user_group_name</h3>
+
+                            <h3>URL</h3>
+                            <div>change_gname</div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">group_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.name exists 2.invalid name</td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.3.5&nbsp;change_user_passway_name</h3>
+
+                            <h3>URL</h3>
+                            <div>changePName</div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">passway_name</td><td class="td-type">string</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">messageN</td><td class="td-type">number</td><td class="td-remark">0.success 1.error</td></tr></tbody></table>
+                        </div>
+                                    </div>
+                            <div class="page">
+                    <h2>1.4&nbsp;delete</h2>
+                                            <div class="action">
+                            <h3>1.4.1&nbsp;delete_dev</h3>
+
+                            <h3>URL</h3>
+                            <div>deleteDev/</div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead></table>
+                        </div>
+                                    </div>
+                            <div class="page">
+                    <h2>1.5&nbsp;get</h2>
+                                            <div class="action">
+                            <h3>1.5.1&nbsp;get_dev</h3>
+
+                            <h3>URL</h3>
+                            <div></div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">device_message</td><td class="td-type">array&lt;object&gt;</td><td class="td-remark"></td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.5.2&nbsp;get_passway</h3>
+
+                            <h3>URL</h3>
+                            <div></div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div></div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">passway_num</td><td class="td-type">number</td><td class="td-remark"></td></tr></tbody></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">passway_resource</td><td class="td-type">object</td><td class="td-remark"></td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.5.3&nbsp;get_user_devices</h3>
+
+                            <h3>URL</h3>
+                            <div>get_dev/</div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div>@type=array_map;</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">dev_name</td><td class="td-type">array&lt;string&gt;</td><td class="td-remark"></td></tr></tbody></table>
+                        </div>
+                                            <div class="action">
+                            <h3>1.5.4&nbsp;get_user_groups</h3>
+
+                            <h3>URL</h3>
+                            <div></div>
+
+                            <h3>Method</h3>
+                            <div>GET</div>
+
+                            <h3>Description</h3>
+                            <div>@type=array_map;</div>
+
+                            <h3>Request Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead></table>
+
+                            <h3>Response Param List</h3>
+                            <table class="param-table"><thead><tr><th class="th-name">Name</th><th class="th-identifier">Identifier</th><th class="th-type">Type</th><th class="th-remark">Remark</th></tr></thead><tbody><tr class="tr-level-1"><td class="td-name"></td><td class="td-identifier">group_name</td><td class="td-type">array&lt;string&gt;</td><td class="td-remark"></td></tr></tbody></table>
+                        </div>
+                                    </div>
+                    </div>
+            <div class="module">
+            <h1>2&nbsp;未命名</h1>
+                    </div>
+    </div>
+
+
+</body></html>
